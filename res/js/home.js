@@ -131,18 +131,6 @@ function welcomewrite() {
 (function getProducts()
 	{
     changeAddonLoad();
-
-
-for(var nn = 0;nn<product.length;nn++)
-{
-console.log(product[nn].carts);
-
-}
-
-
-
-
-
 for(var i=0;i < 12;i++)
 {
 
@@ -405,7 +393,6 @@ for(var k = 0 ;k<CommentN;k++)
 {
 checkCommentLoaded();
 loadedCC.push(comment[indexC]);
-console.log(comment[indexC].name);
 }
 photoC.src = loadedCC[0].ava;
 nameC.innerHTML = loadedCC[0].name;
