@@ -1,0 +1,60 @@
+
+body
+{
+		background-color: #2c3e50;
+	
+
+}
+
+
+#mainDiv
+{
+	background-image: url('img/welcomePage.jpg');
+	background-size: 100%;
+	background-repeat: no-repeat;
+	  background-size: cover;
+	  background-position: center center;
+	 position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  overflow: auto;
+
+}
+
+
+#mainTxt
+{
+	margin-top: 15%;
+	color: white;
+	font-size: 700%;
+	min-height: 50p
+
+}
+
+#selectO
+{
+	border : #1da1f2 4px solid;
+	width: 20%;
+	height:35px;
+	border-radius: 99px;
+   text-align: center;
+   text-align-last: center;
+   margin-left: 40%;
+}
+
+#button
+{
+	padding:0px 35px 0px 35px;
+	margin-top: 60px;
+	margin-bottom: 60px;
+	border : #1da1f2 4px solid;
+	width: 20%;
+	border-radius: 40px;
+   text-align: center;
+   margin-left: 37%;
+   color: white;
+   min-width: 15%;
+
+}

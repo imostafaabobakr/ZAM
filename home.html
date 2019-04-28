@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Home - ZAM</title>
+	<meta charset="utf-8" >
+  <!-- Fav icon -->
+<link rel="shortcut icon" type="image/png" href="res/style/img/logo.png"/>
+
+	<link rel="stylesheet" type="text/css" href="res/style/home.css">
+	<!-- awesome font icons -->
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+
+	<!-- Footer -->
+<link rel="stylesheet" type="text/css" href="res/style/constantStyle.css">
+</head>
+<body>
+	<!-- Loader -->
+		<div  id="loader">
+		<img id="loaderimg" src="res/style/img/loader.gif">
+</div>
+
+<div  id="mainDiv">
+<div id="header">
+	<i id="menu" class="fas fa-bars" onclick="openNav()"></i>
+	<a href="index.html"><img id="logo" src="res/style/img/logo.png" width="80px" height="80px"></a>
+	<input id="search" type="text" name="search" placeholder="Search...">
+	<i id="user"class="fas fa-user-tie"></i>
+<i id="cart" class="fas fa-shopping-cart"></i>
+</div>
+
+<!-- Container of products -->
+
+<div id="contAll">
+  <div id="productC">
+
+
+<div id="coverProduct">
+  <i id="closebtn" class="far fa-times-circle" onclick="closeD()"></i>
+  <img id="picPF" class="imgPF" >
+ <h2 id="namePF"></h2>
+  <p id="ratePF" class="ratePFC">&nbsp;<i class="fas fa-star"></i></p>
+ <p class="pricePFC" id="pricePF"></p>
+  <span id="cartPF" class="cartPFS" onclick="onclickCardF()">Add to cart &nbsp;<i class="fas fa-shopping-cart"></i></span>
+</div>
+<div id="productBF">
+  <div id="descF">
+    <h3>Description : </h3>
+    <p id="descFP"></p>
+  </div>
+  <div id="comments">
+        <h3>Comments : </h3>
+          <!-- Comments -->
+<div id="singleComment">
+  <i id="leftA" class="fas fa-chevron-left" onclick="commentPrev()"></i>
+  <div id="headerC">
+    <img id="photoC" class="photoC" src="res/style/img/product/camera/1.jpg">
+<h5 id="nameC">Mostafa Abobakr</h5>
+  <p id="rateC" class="rateCC">3 &nbsp;<i class="fas fa-star"></i></p>
+  <br/>
+ <p id="commentC" >The Samsung Galaxy A30 Dual-SIM smartphone</p>
+  </div>
+  <i  id="rightA" class="fas fa-chevron-right" onclick="commentNext()"></i>
+</div>
+
+  </div> 
+
+</div>
+</div>
+</div>
+<!-- Menu -->
+<div id="sidenavId" class="sidenav">
+  <a href="#close" class="closebtn" onclick="closeNav()">&times;</a>
+  <a href="#">Phones</a>
+  <a href="#">Watches</a>
+  <a href="#">Power Banks</a>
+  <a href="#">Accessories</a>
+ <a href="#">Head phones</a>
+ <a href="#">Laptops</a> 
+ <a href="#">Cameras</a>
+ <a href="#">Tablets</a>
+</div>
+
+<!--    Slider-->
+  <div class="slider-holder">
+        <span id="slider-image-1"></span>
+        <div class="image-holder">
+            <img src="res/style/img/welcomePage.jpg" class="slider-image" id="sliderImage" />
+        </div>
+        <div class="button-holder">
+            <a onmouseover="changebyDot0()" class="slider-change"></a>
+            <a onmouseover="changebyDot1()" class="slider-change"></a>
+            <a onmouseover="changebyDot2()" class="slider-change"></a>
+        </div>
+    </div>
+<div id="productAll">
+<!-- 	filter
+ --> 
+<div id="filter">
+	<h2 style="color: white;">Search Filter : &nbsp; &nbsp;</h2>
+	<div>
+		<input class="inputt" type="text" name="namePS" id="namePS" placeholder="Product name">
+	<select id="selectP" class="inputt" style="height: 33px;">
+	<option  value="1" selected="selected">Phones</option> 
+	<option  value="2" >Watches</option> 
+	<option  value="3">Power Banks</option> 
+	<option  value="4"">Accessories</option> 
+	<option  value="5" >Headphones</option> 
+	<option  value="6" >Laptops</option> 
+	<option  value="7">Cameras</option> 
+	<option  value="8">Tablets</option> 
+</select>
+	</div>
+	<div>
+				<input class="inputt" type="text" name="priceL" placeholder="Min price" id="priceL">
+		<input class="inputt" type="text" name="priceH" placeholder="Max price" id="priceH">
+<button onclick="searchP()" class="inputt" style="width: auto; height: auto; padding: 5px 15px 5px 15px;">Search</button>
+	</div>
+	
+
+</div>
+
+
+
+
+  <div id="productstable">
+               <div class="theProduct" id="theProduct1">
+      <img  id="imgP1" class="imgP" onmouseover="offMouseProduct(this)" onmouseout="onMouseProduct(this)" onclick="onClickProduct(this.id)">
+        <p class="nameP" id="nameP1" onmouseover="onMouseProduct(this)" onmouseout="offMouseProduct(this)" onclick="onClickProduct(this.id)" >Iphone X - 16Gb</p>
+         <div><p id="rateP1"  class="rateP"></p></div>
+         <span><p class="priceP" id="priceP1"></p></span>
+         <span id="cart1" class="addCart" onclick="onclickCard(this.id)">
+<span><p id="added1">Add to cart  <span><i class="fas fa-shopping-cart"></i></span></p></span>
+         </span>
+      
+
+    </div>
+               <div class="theProduct" id="theProduct2">
+      <img  id="imgP2" class="imgP" onmouseover="onMouseProduct(this)" onmouseout="offMouseProduct(this)" onclick="onClickProduct(this.id)" >
+        <p class="nameP" id="nameP2" onmouseover="onMouseProduct(this)" onmouseout="offMouseProduct(this)" onclick="onClickProduct(this.id)">Iphone X - 16Gb</p>
+         <div><p id="rateP2" class="rateP" ></p></div>
+        <p class="priceP" id="priceP2"></p>
+       <span id="cart2" class="addCart" onclick="onclickCard(this.id)">
+<span><p id="added2">Add to cart  <span><i class="fas fa-shopping-cart"></i></span></p></span>
+         </span>
+    </div>
+               <div class="theProduct" id="theProduct3">
+      <img  id="imgP3" class="imgP" onmouseover="onMouseProduct(this)" onmouseout="offMouseProduct(this)" onclick="onClickProduct(this.id)">
+        <p class="nameP" id="nameP3" onmouseover="onMouseProduct(this)" onmouseout="offMouseProduct(this)" onclick="onClickProduct(this.id)">Iphone X - 16Gb</p>
+         <div><p id="rateP3" class="rateP"></p></div>
+        <p class="priceP" id="priceP3"></p>
+               <span id="cart3" class="addCart" onclick="onclickCard(this.id)">
+<span><p id="added3">Add to cart  <span><i class="fas fa-shopping-cart"></i></span></p></span>
+         </span>
+    </div>
+             <div class="theProduct" id="theProduct4">
+      <img  id="imgP4" class="imgP" onmouseover="onMouseProduct(this)" onmouseout="offMouseProduct(this)" onclick="onClickProduct(this.id)">
+        <p class="nameP" id="nameP4" onmouseover="onMouseProduct(this)" onmouseout="offMouseProduct(this)" onclick="onClickProduct(this.id)">Iphone X - 16Gb</p>
+         <div><p id="rateP4" class="rateP"></p></div>
+        <p class="priceP" id="priceP4"></p>
+               <span id="cart4" class="addCart" onclick="onclickCard(this.id)">
+<span><p id="added4">Add to cart  <span><i class="fas fa-shopping-cart"></i></span></p></span>
+         </span>
+    </div>
+               <div class="theProduct" id="theProduct5">
+      <img  id="imgP5" class="imgP" onmouseover="onMouseProduct(this)" onmouseout="offMouseProduct(this)" onclick="onClickProduct(this.id)">
+        <p class="nameP" id="nameP5" onmouseover="onMouseProduct(this)" onmouseout="offMouseProduct(this)" onclick="onClickProduct(this.id)">Iphone X - 16Gb</p>
+         <div><p id="rateP5" class="rateP"></p></div>
+        <p class="priceP" id="priceP5"></p>
+               <span id="cart5" class="addCart" onclick="onclickCard(this.id)">
+<span><p id="added5">Add to cart  <span><i class="fas fa-shopping-cart"></i></span></p></span>
+         </span>
+
+    </div>
+               <div class="theProduct" id="theProduct6">
+      <img  id="imgP6" class="imgP" onmouseover="onMouseProduct(this)" onmouseout="offMouseProduct(this)" onclick="onClickProduct(this.id)">
+        <p class="nameP" id="nameP6" onmouseover="onMouseProduct(this)" onmouseout="offMouseProduct(this)" onclick="onClickProduct(this.id)">Iphone X - 16Gb</p>
+         <div><p id="rateP6" class="rateP"></p></div>
+        <p  class="priceP" id="priceP6"></p>
+               <span id="cart6" class="addCart" onclick="onclickCard(this.id)">
+<span><p id="added6">Add to cart  <span><i class="fas fa-shopping-cart"></i></span></p></span>
+         </span>
+
+    </div>
+               <div class="theProduct" id="theProduct7">
+      <img  id="imgP7" class="imgP" onmouseover="onMouseProduct(this)" onmouseout="offMouseProduct(this)" onclick="onClickProduct(this.id)">
+        <p class="nameP" id="nameP7" onmouseover="onMouseProduct(this)" onmouseout="offMouseProduct(this)" onclick="onClickProduct(this.id)">Iphone X - 16Gb</p>
+         <div><p id="rateP7" class="rateP"></p></div>
+        <p class="priceP" id="priceP7"></p>
+               <span id="cart7" class="addCart" onclick="onclickCard(this.id)">
+<span><p id="added7">Add to cart  <span><i class="fas fa-shopping-cart"></i></span></p></span>
+         </span>
+    </div>
+             <div class="theProduct" id="theProduct8">
+      <img  id="imgP8" class="imgP" onmouseover="onMouseProduct(this)" onmouseout="offMouseProduct(this)" onclick="onClickProduct(this.id)">
+        <p class="nameP" id="nameP8" onmouseover="onMouseProduct(this)" onmouseout="offMouseProduct(this)" onclick="onClickProduct(this.id)">Iphone X - 16Gb</p>
+         <div><p id="rateP8" class="rateP"></p></div>
+        <p class="priceP" id="priceP8"></p>
+               <span id="cart8" class="addCart" onclick="onclickCard(this.id)">
+<span><p id="added8">Add to cart  <span><i class="fas fa-shopping-cart"></i></span></p></span>
+         </span>
+    </div>
+                 <div class="theProduct" id="theProduct9">
+      <img  id="imgP9" class="imgP" onmouseover="onMouseProduct(this)" onmouseout="offMouseProduct(this)" onclick="onClickProduct(this.id)">
+        <p class="nameP" id="nameP9" onmouseover="onMouseProduct(this)" onmouseout="offMouseProduct(this)" onclick="onClickProduct(this.id)">Iphone X - 16Gb</p>
+         <div><p id="rateP9" class="rateP"></p></div>
+        <p class="priceP" id="priceP9"></p>
+               <span id="cart9" class="addCart" onclick="onclickCard(this.id)">
+<span><p id="added9">Add to cart  <span><i class="fas fa-shopping-cart"></i></span></p></span>
+         </span>
+
+    </div>
+               <div class="theProduct" id="theProduct10">
+      <img  id="imgP10" class="imgP" onmouseover="onMouseProduct(this)" onmouseout="offMouseProduct(this)" onclick="onClickProduct(this.id)">
+        <p class="nameP" id="nameP10" onmouseover="onMouseProduct(this)" onmouseout="offMouseProduct(this)" onclick="onClickProduct(this.id)">Iphone X - 16Gb</p>
+         <div><p id="rateP10" class="rateP"></p></div>
+        <p class="priceP" id="priceP10"></p>
+              <span id="cart10" class="addCart" onclick="onclickCard(this.id)">
+<span><p id="added10">Add to cart  <span><i class="fas fa-shopping-cart"></i></span></p></span>
+         </span> 
+
+    </div>
+               <div class="theProduct" id="theProduct11">
+      <img  id="imgP11" class="imgP" onmouseover="onMouseProduct(this)" onmouseout="offMouseProduct(this)" onclick="onClickProduct(this.id)">
+        <p class="nameP" id="nameP11" onmouseover="onMouseProduct(this)" onmouseout="offMouseProduct(this)" onclick="onClickProduct(this.id)">Iphone X - 16Gb</p>
+         <div><p id="rateP11" class="rateP"></p></div>
+        <p class="priceP" id="priceP11"></p>
+               <span id="cart11" class="addCart" onclick="onclickCard(this.id)">
+<span><p id="added11">Add to cart  <span><i class="fas fa-shopping-cart"></i></span></p></span>
+         </span>
+    </div>
+             <div class="theProduct" id="theProduct12">
+      <img  id="imgP12" class="imgP" onmouseover="onMouseProduct(this)" onmouseout="offMouseProduct(this)" onclick="onClickProduct(this.id)">
+        <p class="nameP" id="nameP12" onmouseover="onMouseProduct(this)" onmouseout="offMouseProduct(this)" onclick="onClickProduct(this.id)">Iphone X - 16Gb</p>
+         <div><p id="rateP12" class="rateP"></p></div>
+        <p class="priceP" id="priceP12"></p>
+               <span id="cart12" class="addCart" onclick="onclickCard(this.id)">
+<span><p id="added12">Add to cart  <span><i class="fas fa-shopping-cart"></i></span></p></span>
+         </span>
+    </div>
+    </div>
+<a href="#top" href="#top" id="myBtn" title="Go to top"><i class="fas fa-chevron-up"></i></a>
+
+</div>
+</div>
+  </div>
+       <img class="ad" src="res/style/img/ad.jpg">
+
+    <div id="footer">
+  <h3 id="footerR">ZAM &copy; 2019 All Rights Reserved </h3>
+  <div>
+      <span class="footerMenu"><a href="tos.html" >Terms of use</a></span>
+    <span class="footerMenu"><a href="privacy.html">Privacy</a></span>
+  <span class="footerMenu"><a href="contact.html">Contact us</a></span>
+  <span class="footerMenu"><a href="info.html">About us</a></span>
+ <select onchange="selectCountry()" class="inputt" style="height: 33px;"  id="selectO">
+  <option  value="1" selected="selected">United States</option> 
+<option value="18" >Egypt</option>
+<option  value="3.75">Saudi Arabia</option>
+</select>
+  </div>
+
+
+<!-- Product Data -->
+  <script type="text/javascript" src="res/js/database.js"></script>
+<script type="text/javascript" src="res/js/constantJS.js"></script>
+<script type="text/javascript" src="res/js/home.js"></script>
+</body>
+</html>
