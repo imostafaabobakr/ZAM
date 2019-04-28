@@ -397,7 +397,7 @@ loadedCC.push(comment[indexC]);
 photoC.src = loadedCC[0].ava;
 nameC.innerHTML = loadedCC[0].name;
 rateC.innerHTML = loadedCC[0].rate +" <i id=\"starI\" class=\"fas fa-star\">";
-commentC.innerHTML = "dld,ld,;ld,d;l,d;l,d;l,dd nd jdk kdjdjkdj dnklqlkmkldqwmkldwmkmqwd";
+commentC.innerHTML = loadedCC[0].comment;
 
 }
 var iC = 0;
