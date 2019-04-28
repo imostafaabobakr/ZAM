@@ -247,7 +247,7 @@ height: 200px;
 vertical-align: center;
 margin-left: 85px;
 position: absolute;
-max-width: 350px;
+max-width: 250px;
 float: left;
 margin-top: 8px;
 color: #7f8c8d;
@@ -283,11 +283,9 @@ float: left;
         {
    display: inline-block;
 vertical-align: center;
-margin-left: 30px;
-left: 30px;
-position: relative;
-margin-top: 6px;
-float: right;
+margin-left: 170px;
+position: absolute;
+margin-top: 1.5px;
 
         }
         #leftA
