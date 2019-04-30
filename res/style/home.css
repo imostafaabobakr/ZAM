@@ -32,9 +32,10 @@ body
         .button-holder
         {
             width: 100;
-           // position: relative;
             top: -20px;
           margin-left : 45%;
+            cursor: pointer;
+
         }
         
         .slider-change
@@ -83,6 +84,7 @@ body
    text-align: left;
    padding: 0px 10px 0px 10px;
    margin: 10px;
+     cursor: auto;
 }
 
        /* Products style*/
@@ -124,6 +126,7 @@ overflow: hidden;
              width: 300px;
             height: 200px;
              vertical-align: middle;
+     cursor: pointer;
 
         }
         .nameP
@@ -133,6 +136,8 @@ overflow: hidden;
    font-style: oblique;
   font-weight: bold;
   padding: 0px 5px 0px 5px;
+       cursor: pointer;
+
 
         }
         .priceP
@@ -170,6 +175,7 @@ margin-left:50px;
   clear: left;
    display: inline-flex;
    background-color: #1da1f2;
+     cursor: pointer;
 
 }
 
@@ -183,6 +189,7 @@ margin-left:50px;
   margin-right: auto;
   margin-top: 20px;
   margin-bottom: 20px;
+     cursor: pointer;
 
 }
 #sorryS
@@ -294,6 +301,7 @@ vertical-align: center;
 margin-left: 170px;
 position: absolute;
 margin-top: 1.5px;
+     cursor: pointer;
 
         }
         #leftA
@@ -305,6 +313,7 @@ position: relative;
 margin-top: 20px;
 float: left;
 margin-right: 20px;
+     cursor: pointer;
 
         } 
 #nameC
@@ -348,6 +357,7 @@ margin-left:5%;
   clear: left;
    display: inline-flex;
    background-color: #1da1f2;
+     cursor: pointer;
 
 }
 
@@ -372,4 +382,5 @@ margin-left:5%;
     float: right;
    margin: 1% 1% 1% 1%;
     font-size: 1.7em;
+         cursor: pointer;
 }

@@ -24,8 +24,8 @@
 <div id="header">
 	<i id="menu" class="fas fa-bars" onclick="openNav()"></i>
 	<a href="index.html"><img id="logo" src="res/style/img/logo.png" width="80px" height="80px"></a>
-	<input id="search" type="text" name="search" placeholder="Search..." onkeyup="searchMain()">
-	<i id="user"class="fas fa-user-tie"></i>
+	<input class="inputt" id="search" type="text" name="search" placeholder="Search..." onkeyup="searchMain()">
+  <div  id="darkD"><i id="dark" class="far fa-moon"  onclick="darkMoon()"></i></div>
 <i id="cart" class="fas fa-shopping-cart"></i>
 </div>
 
@@ -58,7 +58,7 @@
 <h5 id="nameC">Mostafa Abobakr</h5>
   <p id="rateC" class="rateCC">3 &nbsp;<i class="fas fa-star"></i></p>
   <br/>
- <p id="commentC" >The Samsung Galaxy A30 Dual-SIM smartphone</p>
+ <p id="commentC" ></p>
   </div>
   <i  id="rightA" class="fas fa-chevron-right" onclick="commentNext()"></i>
 </div>
@@ -104,7 +104,7 @@
 	<option  value="1" selected="selected">Phones</option> 
 	<option  value="2" >Watches</option> 
 	<option  value="3">Power Banks</option> 
-	<option  value="4"">Accessories</option> 
+	<option  value="4">Accessories</option> 
 	<option  value="5" >Headphones</option> 
 	<option  value="6" >Laptops</option> 
 	<option  value="7">Cameras</option> 
@@ -239,7 +239,7 @@
          </span>
     </div>
     </div>
-<a href="#top" href="#top" id="myBtn" title="Go to top"><i class="fas fa-chevron-up"></i></a>
+<a href="#top" id="myBtn" title="Go to top"><i class="fas fa-chevron-up"></i></a>
 
 </div>
 </div>
@@ -266,5 +266,6 @@
   <script type="text/javascript" src="res/js/database.js"></script>
 <script type="text/javascript" src="res/js/constantJS.js"></script>
 <script type="text/javascript" src="res/js/home.js"></script>
+<script type="text/javascript">darkApply();</script>
 </body>
 </html>

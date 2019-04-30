@@ -259,12 +259,7 @@ function onMouseProduct (obj)
 	    obj.style.color = "#1da1f2";
 
 }
-//on mouse over
-function offMouseProduct (obj)
-{
-	    obj.style.color = "#000";
 
-}
 function onClickProduct (obj)
 {
     var productChoo = document.getElementById(String(obj)); 
