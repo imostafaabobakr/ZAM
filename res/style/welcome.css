@@ -39,7 +39,9 @@ body
 	border-radius: 99px;
    text-align: center;
    text-align-last: center;
-   margin-left: 39%;
+     display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 #button
@@ -51,7 +53,9 @@ body
 		width: 200px;
 	border-radius: 40px;
    text-align: center;
-   margin-left: 37.3%;
+     display: block;
+  margin-left: auto;
+  margin-right: auto;
    color: white;
 
 }

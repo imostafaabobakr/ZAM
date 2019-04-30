@@ -178,9 +178,17 @@ margin-left:50px;
 .ad
 {
      width: 85%;
-     margin: 20px 0px 20px 8%;
-            clear: both;
+     display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20px;
+  margin-bottom: 20px;
 
+}
+#sorryS
+{
+ text-align: center;
+ color: #636e72;
 }
 
 /*products container dialog*/

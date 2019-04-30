@@ -5,9 +5,7 @@
     var loadedP = [];
     var loadedC = [];
      var loadedCC = [];
-    var cartA=["cart1","cart2","cart3","cart4","cart5","cart6","cart7","cart8","cart9","cart10","cart11","cart12"];
-    var added=["added1","added2","added3","added4","added5","added6","added7","added8","added9","added10","added11","added12"];
-    var choosenP=[];
+   var choosenP=[];
 //vars
 var curr;
 var name = 'country';
@@ -92,7 +90,24 @@ var imgP9 = document.getElementById("imgP9");
 var imgP10 = document.getElementById("imgP10");
 var imgP11 = document.getElementById("imgP11");
 var imgP12 = document.getElementById("imgP12");
+//cart button
+var cart1 = document.getElementById("cart1");
+var cart2 = document.getElementById("cart2");
+var cart3 = document.getElementById("cart3");
+var cart4 = document.getElementById("cart4");
+var cart5 = document.getElementById("cart5");
+var cart6 = document.getElementById("cart6");
+var cart7 = document.getElementById("cart7");
+var cart8 = document.getElementById("cart8");
+var cart9 = document.getElementById("cart9");
+var cart10 = document.getElementById("cart10");
+var cart11 = document.getElementById("cart11");
+var cart12 = document.getElementById("cart12");
+
+
+
 //arrays
+var cartP = [cart1,cart2,cart3,cart4,cart5,cart6,cart7,cart8,cart9,cart10,cart11,cart12];
 var bodyP = [bodyP1,bodyP2,bodyP3,bodyP4,bodyP5,bodyP6,bodyP7,bodyP8,bodyP9,bodyP10,bodyP11,bodyP12];
 var nameP = [nameP1,nameP2,nameP3,nameP4,nameP5,nameP6,nameP7,nameP8,nameP9,nameP10,nameP11,nameP12];
 var rateP = [rateP1,rateP2,rateP3,rateP4,rateP5,rateP6,rateP7,rateP8,rateP9,rateP10,rateP11,rateP12];
@@ -100,7 +115,9 @@ var priceP = [priceP1,priceP2,priceP3,priceP4,priceP5,priceP6,priceP7,priceP8,pr
 var imgP = [imgP1,imgP2,imgP3,imgP4,imgP5,imgP6,imgP7,imgP8,imgP9,imgP10,imgP11,imgP12];
 var imgPS = ["imgP1","imgP2","imgP3","imgP4","imgP5","imgP6","imgP7","imgP8","imgP9","imgP10","imgP11","imgP12"];
 var namePSA = ["nameP1","nameP2","nameP3","nameP4","nameP5","nameP6","nameP7","nameP8","nameP9","nameP10","nameP11","nameP12"];
-
+var cartA=["cart1","cart2","cart3","cart4","cart5","cart6","cart7","cart8","cart9","cart10","cart11","cart12"];
+var added=["added1","added2","added3","added4","added5","added6","added7","added8","added9","added10","added11","added12"];
+    
 
 function changeAddonLoad()
 {
@@ -118,11 +135,10 @@ for(var op = 0;op<product.length;op++)
 {
   if(choosenP[l].name.includes(product[op].name))
   {
-product[l].carts = 1;
+product[op].carts = 1;
 break;
   }else
-  product[l].carts = 0;
-
+  product[op].carts = 0;
 }
 }  
 }
@@ -157,6 +173,14 @@ value = 1;
     priceP[i].innerHTML = (Number(product[j].price)*value) + currL;
     rateP[i].innerHTML = product[j].rating +" <i id=\"starI\" class=\"fas fa-star\">";
     imgP[i].src = product[j].path;
+    if(product[j].carts === 1)
+    {
+var addedText;
+
+        cartP[i].style.backgroundColor = "#2ecc71";
+addedText = document.getElementById(added[i]); 
+addedText.innerHTML= "Added to cart" + "  <span><i class=\"fas fa-check\"></i></span>";
+}
 }
 
 
@@ -222,10 +246,10 @@ loadedP.push(j);
   {
     indexC = Math.floor(Math.random() * (29 - 0 + 1) ) + 0; 
 
-  if(loadedC.includes(j))
-checkProductLoaded();
+  if(loadedC.includes(indexC))
+checkCommentLoaded();
     else
-      loadedC.push(j);
+      loadedC.push(indexC);
     
   }
 
@@ -268,6 +292,7 @@ var addedText;
    var indexL = cartA.indexOf(String(obj));
 	 var nameL = nameP[indexL].innerHTML;
    var index = product.findIndex(x => x.name === nameL);
+   var indexDelete;
 switch(product[index].carts)
 {
 		case 0 :
@@ -275,23 +300,29 @@ switch(product[index].carts)
 addedText = document.getElementById(added[indexL]); 
 addedText.innerHTML= "Added to cart" + "  <span><i class=\"fas fa-check\"></i></span>";
 product[index].carts = 1;
-if(!choosenP.includes(product[index]))
-{
 choosenP.push(product[index]);
  window.sessionStorage.setItem('cartCP',JSON.stringify(choosenP));
-}
 	break;
 	case 1:
 	 btnC.style.backgroundColor = "#1da1f2";
 addedText = document.getElementById(added[indexL]); 
 addedText.innerHTML= "Add to cart" + " <span><i class=\"fas fa-shopping-cart\"></i></span>";
-product[index].carts = 0;
+product[index].carts = 1;
 //remove from cart
- var index = choosenP.findIndex(x => x.name === nameL);
-if (index > -1) {
-  choosenP.splice(index, 1);
-}
- window.sessionStorage.setItem('cartCP',JSON.stringify(choosenP));
+l = 0;
+op = 0;
+   for(var l = 0;l<choosenP.length;l++)
+{
+  if(choosenP[l].name.includes(nameL))
+  {
+    indexDelete = l;
+break;
+  }
+}  
+  product[index].carts = 0;
+  choosenP.splice(indexDelete, 1);
+   window.sessionStorage.setItem('cartCP',JSON.stringify(choosenP));
+
 	break;
 
 
@@ -312,22 +343,15 @@ switch(product[index].carts)
 addedText = document.getElementById(added[selectedII]); 
 addedText.innerHTML= "Added to cart" + "  <span><i class=\"fas fa-check\"></i></span>";
 product[index].carts = 1;
-choosenP.push(product[index]);
- window.sessionStorage.setItem('cartCP',JSON.stringify(choosenP));
   break;
   case 0:
    btnC.style.backgroundColor = "#1da1f2";
 addedText = document.getElementById(added[selectedII]); 
 addedText.innerHTML= "Add to cart" + " <span><i class=\"fas fa-shopping-cart\"></i></span>";
 product[index].carts = 0;
-//remove from cart
-  break;
-
 
 }
 }
-
-
 //products full dialog
 var picPF,namePF,ratePF,pricePF,descFP,cartPF,CommentN;
 picPF = document.getElementById("picPF");
@@ -438,11 +462,8 @@ switch(product[index].carts)
         cartPF.style.backgroundColor = "#2ecc71";
 cartPF.innerHTML= "Added to cart " + "  <span><i class=\"fas fa-check\"></i></span>";
 product[index].carts = 1;
-if(!choosenP.includes(product[index]))
-{
 choosenP.push(product[index]);
  window.sessionStorage.setItem('cartCP',JSON.stringify(choosenP));
-}
  onclickCardC(selectedII);
   break;
   case 1:
@@ -451,11 +472,20 @@ cartPF.innerHTML= "Add to cart " + " <span><i class=\"fas fa-shopping-cart\"></i
 product[index].carts = 0;
 onclickCardC(selectedII);
 //remove from cart
- var index = choosenP.findIndex(x => x.name === nameL);
-if (index > -1) {
-  choosenP.splice(index, 1);
-}
- window.sessionStorage.setItem('cartCP',JSON.stringify(choosenP));
+l = 0;
+op = 0;
+   for(var l = 0;l<choosenP.length;l++)
+{
+  if(choosenP[l].name.includes(nameL))
+  {
+    indexDelete = l;
+break;
+  }
+}  
+  product[index].carts = 0;
+  choosenP.splice(indexDelete, 1);
+   window.sessionStorage.setItem('cartCP',JSON.stringify(choosenP));
+
   break;
 
 }
@@ -469,15 +499,10 @@ switch(product[index].carts)
     case 1 :
         cartPF.style.backgroundColor = "#2ecc71";
 cartPF.innerHTML= "Added to cart " + "  <span><i class=\"fas fa-check\"></i></span>";
-product[index].carts = 1;
-choosenP.push(product[index]);
- window.sessionStorage.setItem('cartCP',JSON.stringify(choosenP));
   break;
   case 0:
    cartPF.style.backgroundColor = "#1da1f2";
 cartPF.innerHTML= "Add to cart " + " <span><i class=\"fas fa-shopping-cart\"></i></span>";
-product[index].carts = 0;
-//remove from cart
   break;
 
 
@@ -491,7 +516,10 @@ var namePS,catPS,minprice=0,maxprice;
 
 function searchP()
 {
-    var sti,endi,ite;
+    var sti,endi,ite,sorryS;
+
+    sorryS = document.getElementById("sorryS");
+
   //get Search Data
 namePS = document.getElementById("namePS").value;
 if(document.getElementById("priceL").value != 0)
@@ -573,18 +601,117 @@ if(product[i].name.toLowerCase().includes(namePS.trim().toLowerCase())&&(Number(
     priceP[ite].innerHTML =   (Number(product[i].price)*value) + currL;
     rateP[ite].innerHTML = product[i].rating +" <i id=\"starI\" class=\"fas fa-star\">";
     imgP[ite].src = product[i].path;
+
+ for(var l = 0;l<choosenP.length;l++)
+{
+  if(choosenP[l].name.includes(product[i].name))
+  { 
+     var addedText;
+
+        cartP[ite].style.backgroundColor = "#2ecc71";
+addedText = document.getElementById(added[ite]); 
+addedText.innerHTML= "Added to cart" + "  <span><i class=\"fas fa-check\"></i></span>";
+break;
+  }
+  else
+  {
+     cartP[ite].style.backgroundColor = "#1da1f2";
+addedText = document.getElementById(added[ite]);
+addedText.innerHTML= "Add to cart" + " <span><i class=\"fas fa-shopping-cart\"></i></span>";
+  }
+
+}  
         ite++;
 
 }
 }
+  console.log(ite);
+
+if(ite === 0)
+            sorryS.innerHTML = "No products found :(";
+else
+    sorryS.innerHTML = "";
+
 for(var j = ite;j<12;j++)
 {
   //remove items
   bodyP[j].remove();
 }
+}
 
 
+function searchMain()
+{
+    var sti = 0,endi = 95,ite,sorryS;
+    sorryS = document.getElementById("sorryS");
+  //get Search Data
+var namePS = document.getElementById("search").value;
+document.getElementById("namePS").value = namePS;
+ite = 0;
+var i=0;
+for( i=sti;i <= endi;i++)
+{
+  var currL = ' $';
+  var value = 1;
 
+switch(curr)
+{
+  case "1":
+  currL = ' $';
+value = 1;
+  break;
+  case "18":
+  currL = ' EGP';
+  value = 18;
+  break;
+  case "3.75":
+  currL = ' SAR';
+  value = 3.75;
+  break;
+}
+//the more conditions
+if(product[i].name.toLowerCase().includes(namePS.trim().toLowerCase()))
+{
+  //add item
+  document.getElementById("productstable").appendChild(bodyP[ite]);  
+      nameP[ite].innerHTML = product[i].name;
+    priceP[ite].innerHTML =   (Number(product[i].price)*value) + currL;
+    rateP[ite].innerHTML = product[i].rating +" <i id=\"starI\" class=\"fas fa-star\">";
+    imgP[ite].src = product[i].path;
 
+ for(var l = 0;l<choosenP.length;l++)
+{
+  if(choosenP[l].name.includes(product[i].name))
+  { 
+     var addedText;
 
+        cartP[ite].style.backgroundColor = "#2ecc71";
+addedText = document.getElementById(added[ite]); 
+addedText.innerHTML= "Added to cart" + "  <span><i class=\"fas fa-check\"></i></span>";
+break;
+  }
+  else
+  {
+     cartP[ite].style.backgroundColor = "#1da1f2";
+addedText = document.getElementById(added[ite]);
+addedText.innerHTML= "Add to cart" + " <span><i class=\"fas fa-shopping-cart\"></i></span>";
+  }
+
+}  
+        ite++;
+
+}
+}
+  console.log(ite);
+
+if(ite === 0)
+            sorryS.innerHTML = "No products found :(";
+else
+    sorryS.innerHTML = "";
+
+for(var j = ite;j<12;j++)
+{
+  //remove items
+  bodyP[j].remove();
+}
 }
