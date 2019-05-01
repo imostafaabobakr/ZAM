@@ -65,6 +65,37 @@ catch(err)
 {
 
 }
+
+
+try
+{
+//cart page
+document.getElementById("nameP").style.color = "#000";
+document.getElementById("mainT").style.color = "#000";
+document.getElementById("itemsN").style.color = "#000";
+document.getElementById("rightA").style.color = "#000";
+document.getElementById("leftA").style.color = "#000";
+}
+catch(err)
+{
+  try{
+document.getElementById("mainT").style.color = "#fff";
+}
+catch(err)
+{
+
+}
+}
+try{
+  for(var t = 0;t<5;t++)
+  {
+      document.getElementsByClassName("nameP")[t].style.color = "#000";
+  }
+}catch(err)
+{
+
+}
+
 color = "#000";
 break;
 
@@ -111,6 +142,35 @@ document.getElementById("nameC").style.color = "#fff";
 document.getElementById("rightA").style.color = "#fff";
 }
 catch(err)
+{
+
+}
+try
+{
+//cart page
+document.getElementById("nameP").style.color = "#fff";
+document.getElementById("mainT").style.color = "#fff";
+document.getElementById("itemsN").style.color = "#fff";
+document.getElementById("rightA").style.color = "#fff";
+document.getElementById("leftA").style.color = "#fff";
+}
+catch(err)
+{
+  try{
+document.getElementById("mainT").style.color = "#fff";
+}
+catch(err)
+{
+
+}
+}
+
+try{
+  for(var t = 0;t<5;t++)
+  {
+      document.getElementsByClassName("nameP")[t].style.color = "#fff";
+  }
+}catch(err)
 {
 
 }
@@ -180,11 +240,18 @@ function closeNav() {
 window.onscroll = function() {scrollFunction()};
 
 function scrollFunction() {
-  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+  try
+  {
+     if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
     document.getElementById("myBtn").style.display = "block";
   } else {
     document.getElementById("myBtn").style.display = "none";
-  }
+  } 
+}catch(err)
+{
+
+}
+
 }
 
 //country select menu functions

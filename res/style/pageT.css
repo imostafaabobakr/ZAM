@@ -97,3 +97,149 @@ width: 250px;
      cursor: pointer;
 
 }
+
+/*cart page*/
+
+
+#priceP
+{
+margin-top: -20px;
+            font-family: "Times New Roman", Sans, serif;
+ font-size: 25px;
+   font-style: oblique;
+  font-weight: bold;
+  float: left;
+  color: #1da1f2;
+}
+#photoP
+{
+  width: 170px;
+  height: 150px;
+    display: inline-block;
+    margin-top: 70px;
+float: left;
+}
+#CandN
+{
+   display: flex;
+margin: auto;
+min-width: 300px;
+ display: -webkit-flex;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   flex-direction: column;
+   flex-wrap: wrap;
+   flex-flow: column wrap;
+   align-content: flex-end;
+    margin-top: 20px;
+    overflow-y: hidden;
+}
+#productCart
+{
+width: 100%;
+min-width: 900px;
+display:block;
+margin-bottom: 30px;
+margin: auto;
+ display: -webkit-flex;
+   display: flex;
+   -webkit-align-items: center;
+   align-items: center;
+   -webkit-justify-content: center;
+   justify-content: center;
+   -webkit-flex-direction: row;
+   flex-direction: row;
+   -webkit-flex-wrap: wrap;
+   flex-wrap: wrap;
+   -webkit-flex-flow: row wrap;
+   flex-flow: row wrap;
+   -webkit-align-content: flex-end;
+   align-content: flex-end;
+    margin-top: 20px;
+    overflow-y: hidden;
+}
+#deleteP
+        {
+           color: #e74c3c;
+    font-size: 1.2em; 
+ display: inline-flex;
+vertical-align: center;
+margin-top: 33px;
+margin-left: 5px;
+bottom: 9px;
+float: left;
+cursor: pointer;
+
+        }
+       #rightA
+        {
+   display: inline-block;
+vertical-align: center;
+margin-left: 30%;
+margin-top: 75px;
+     cursor: pointer;
+         font-size: 2.0em;
+
+        }
+        #leftA
+        {
+ display: inline-block;
+vertical-align: center;
+margin-top: 80px;
+margin-left: 1%;
+float: left;
+margin-right: 7%;
+     cursor: pointer;
+         font-size: 2.0em;
+
+
+        } 
+#nameP
+{
+
+font-size: 2.0vw;
+margin-top: 80px;
+margin-left: 10px;
+}
+
+        #button
+{
+   background-color: #444;
+    padding:0px 5px 0px 5px;
+    border : #1da1f2 4px solid;
+    border-radius: 20px;
+   text-align: center;
+   color: white;
+margin-left:50px;
+ margin-right:0;
+  clear: left;
+   display: inline-flex;
+   background-color: #1da1f2;
+     cursor: pointer;
+     margin-top: 80px;
+margin-bottom: 40px;
+}
+#itemsN
+{
+       display: inline-block;
+margin-left: 10px;
+margin-right: 50px;
+}
+
+#priceAll
+{
+            font-family: "Times New Roman", Sans, serif;
+ font-size: 25px;
+   font-style: oblique;
+  font-weight: bold;
+  color: #1da1f2;
+    display: inline-block;
+margin-left: 10px;
+margin-right: 50px;
+}
+#sorryS
+{
+ text-align: center;
+ color: #95a5a6;
+}

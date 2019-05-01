@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Cart - ZAM</title>
+	<title>Pay - ZAM</title>
 	 <meta  name="viewport" content="width=device-width, initial-scale=1.0" charset="utf-8" >
 
   <!-- Fav icon -->
@@ -42,33 +42,23 @@
  <a href="tab.html">Tablets</a>
 </div>
 
-<div id="descKlam" style="min-width: 900px;   background-color: transparent;">
-	<h1 id="mainT">Your Cart</h1>
-<div id="productCart">
-  <i id="leftA" class="fas fa-chevron-left" onclick="PPrev()"></i>
-  <div id="headerC">
-    <img id="photoP" src="res/style/img/product/camera/1.jpg">
-    <div id="CandN">
-      <h5 id="nameP"></h5>
- <p id="priceP" ></p>
-    </div>
-  </div>
-    <p id="deleteP">&nbsp;<i class="fas fa-trash" onclick="deleteAct()"></i></p>
-  <i  id="rightA" class="fas fa-chevron-right" onclick="PNext()"></i>
-  <div style="display: block; margin: auto; width: 560px">
-   <h3 id="itemsN">0 items</h3>
-      <h3 id="priceAll"></h3>
-<div onclick="goPay()" id="button">
-<h2>Pay now &nbsp;&nbsp;<span><i class="fas fa-money-check-alt"></i></span></h2>
+<div id="descKlam" style=" background-color: transparent;">
+	<h1 style="  color: #1da1f2;">Pay in secured way &nbsp;&nbsp; <i class="fab fa-paypal"></i>&nbsp;&nbsp;
+<i class="fab fa-cc-visa"></i>&nbsp;&nbsp;
+
+<i class="fab fa-cc-mastercard"></i></h1>
+
+	<form>
+		<input class="inputt" type="text" name="nameF" id="nameF" placeholder="First name" required>
+		<input class="inputt" type="text" name="nameL" id="nameL" placeholder="Last name" required>
+		<input class="inputt" type="email" name="email" id="email" placeholder="Email" required>
+		<input class="inputt" type="text" name="adress" id="adress" placeholder="Adress" required>
+		<input class="inputt" type="tel" name="credit" id="credit" placeholder="111-111-111-111-111" required>
+			<input class="inputt" type="number" name="cvv" id="cvv" placeholder="CVV" required>
+			<input class="inputt" type="date" name="exp" id="exp" placeholder="Exp. Date" required>
+		<input style="text-align: center;" class="inputt" type="submit" name="send" id="submit" value="Send">
+	</form>
 </div>
-</div>
-</div>
-           <h1 id="sorryS"></h1>
-
-
-
-</div> 
-
            <a href="https://www.cibeg.com/Arabic/Pages/default.aspx" target="_blank"> <img class="ad"src="res/style/img/ad.jpg"></a>
       
 
