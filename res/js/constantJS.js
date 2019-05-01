@@ -26,8 +26,15 @@ for(var i=0;i<12;i++)
 
 if(i < 7 && i != 5)
 {
-    document.getElementsByClassName("inputt")[i].style.background = "#fff";
+  try{
+      document.getElementsByClassName("inputt")[i].style.background = "#fff";
    document.getElementsByClassName("inputt")[i].style.color = "#000";
+  }
+  catch(err)
+  {
+
+  }
+  
 }
 
 }
@@ -57,8 +64,14 @@ for(var i=0;i<12;i++)
 
 if(i < 7 && i != 5)
 {
+  try{
     document.getElementsByClassName("inputt")[i].style.background = "#10171e";
         document.getElementsByClassName("inputt")[i].style.color = "#fff";
+  }
+  catch(err)
+  {
+
+  }
 
 }
 }
@@ -162,6 +175,8 @@ function selectCountry()
   var SelectedCountry = document.getElementById("selectO");
   //get choosen value
 curr = SelectedCountry.options[SelectedCountry.selectedIndex].value;
+window.sessionStorage.country = curr;
+location.reload();
 }
 //get cookies
 (function getcookies()

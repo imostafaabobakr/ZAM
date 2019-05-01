@@ -16,6 +16,7 @@ product = JSON.parse(window.sessionStorage.getItem("productarr"));
 comment = JSON.parse(window.sessionStorage.getItem("commentarr"));
 choosenP = JSON.parse(window.sessionStorage.getItem("cartCP"));
 
+
 //Dialog elements
 var contAll = document.getElementById("contAll"); 
 var productC = document.getElementById("productC"); 
@@ -144,7 +145,7 @@ break;
 function welcomewrite() {
 }
 (function getProducts()
-	{
+  {
     changeAddonLoad();
 for(var i=0;i < 12;i++)
 {
@@ -182,58 +183,16 @@ addedText.innerHTML= "Added to cart" + "  <span><i class=\"fas fa-check\"></i></
 }
 }
 
+searchP();
 
-	})();
-  //slider data
-var slideImage = document.getElementById("sliderImage");
-var dots = document.getElementsByClassName("slider-change");
-var i = 0;
-
-
-if(typeof(Storage) === "undefined")
-	curr = 1;
-
-(function changebytime ()
-{
-
-   slideImage.src = "res/style/img/slider/"+i+".jpg";
-
-    if(i<2)
-    {
-    i++;
-    setTimeout(changebytime, 5000);
-}
-else
-{
-	i=0;
-	setTimeout(changebytime, 5000);
-}
-    
-})();
-
-function changebyDot0()
-{
-	i=0;
-	slideImage.src = "res/style/img/slider/"+i+".jpg";
-
-	
-}
-function changebyDot1()
-{
-i=1;
-	slideImage.src = "res/style/img/slider/"+i+".jpg";
-}
-function changebyDot2()
-{
-	i=2;
-	slideImage.src = "res/style/img/slider/"+i+".jpg";
-}
+  })();
+  
 
 //products
 
-	function checkProductLoaded()
+  function checkProductLoaded()
   {
-     j = Math.floor(Math.random() * (95 - 0 + 1) ) + 0; 
+     j = Math.floor(Math.random() * (71 - 60 + 1) ) + 60; 
 
   if(loadedP.includes(j))
 checkProductLoaded();
@@ -255,7 +214,7 @@ checkCommentLoaded();
 //on mouse over
 function onMouseProduct (obj)
 {
-	    obj.style.color = "#1da1f2";
+      obj.style.color = "#1da1f2";
 
 }
 
@@ -284,21 +243,21 @@ function onclickCard(obj)
 var btnC = document.getElementById(String(obj)); 
 var addedText;
    var indexL = cartA.indexOf(String(obj));
-	 var nameL = nameP[indexL].innerHTML;
+   var nameL = nameP[indexL].innerHTML;
    var index = product.findIndex(x => x.name === nameL);
    var indexDelete;
 switch(product[index].carts)
 {
-		case 0 :
-		    btnC.style.backgroundColor = "#2ecc71";
+    case 0 :
+        btnC.style.backgroundColor = "#2ecc71";
 addedText = document.getElementById(added[indexL]); 
 addedText.innerHTML= "Added to cart" + "  <span><i class=\"fas fa-check\"></i></span>";
 product[index].carts = 1;
 choosenP.push(product[index]);
  window.sessionStorage.setItem('cartCP',JSON.stringify(choosenP));
-	break;
-	case 1:
-	 btnC.style.backgroundColor = "#1da1f2";
+  break;
+  case 1:
+   btnC.style.backgroundColor = "#1da1f2";
 addedText = document.getElementById(added[indexL]); 
 addedText.innerHTML= "Add to cart" + " <span><i class=\"fas fa-shopping-cart\"></i></span>";
 product[index].carts = 1;
@@ -317,7 +276,7 @@ break;
   choosenP.splice(indexDelete, 1);
    window.sessionStorage.setItem('cartCP',JSON.stringify(choosenP));
 
-	break;
+  break;
 
 
 }
@@ -527,43 +486,9 @@ maxprice = document.getElementById("priceH").value;
 else
 maxprice=99999999;
 
-catPS = document.getElementById("selectP").options[document.getElementById("selectP").selectedIndex].value;
-
-switch(catPS)
-{
-  case "1":
-sti = 0;
-endi = 11;
-  break;
-  case "2":
-  sti = 12;
-endi = 23;
-  break;
-  case "3":
-  sti = 24;
-endi = 35;
-  break;
-  case "4":
-  sti = 36;
-endi = 47;
-  break;
-  case "5":
-  sti = 48;
-endi = 59;
-  break;
-  case "6":
-  sti = 60;
+sti = 60;
 endi = 71;
-  break;
-  case "7":
-  sti = 72;
-endi = 83;
-  break;
-  case "8":
-  sti = 84;
-endi = 95;
-  break;
-}
+
 ite = 0;
 var i=0;
 for( i=sti;i <= endi;i++)
@@ -635,7 +560,9 @@ for(var j = ite;j<12;j++)
 
 function searchMain()
 {
-    var sti = 0,endi = 95,ite,sorryS;
+    var sti,endi,ite,sorryS;
+    sti = 60;
+endi = 71;
     sorryS = document.getElementById("sorryS");
   //get Search Data
 var namePS = document.getElementById("search").value;

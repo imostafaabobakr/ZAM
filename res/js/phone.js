@@ -16,6 +16,7 @@ product = JSON.parse(window.sessionStorage.getItem("productarr"));
 comment = JSON.parse(window.sessionStorage.getItem("commentarr"));
 choosenP = JSON.parse(window.sessionStorage.getItem("cartCP"));
 
+
 //Dialog elements
 var contAll = document.getElementById("contAll"); 
 var productC = document.getElementById("productC"); 
@@ -181,59 +182,16 @@ addedText = document.getElementById(added[i]);
 addedText.innerHTML= "Added to cart" + "  <span><i class=\"fas fa-check\"></i></span>";
 }
 }
+searchP();
 
 
 	})();
-  //slider data
-var slideImage = document.getElementById("sliderImage");
-var dots = document.getElementsByClassName("slider-change");
-var i = 0;
-
-
-if(typeof(Storage) === "undefined")
-	curr = 1;
-
-(function changebytime ()
-{
-
-   slideImage.src = "res/style/img/slider/"+i+".jpg";
-
-    if(i<2)
-    {
-    i++;
-    setTimeout(changebytime, 5000);
-}
-else
-{
-	i=0;
-	setTimeout(changebytime, 5000);
-}
-    
-})();
-
-function changebyDot0()
-{
-	i=0;
-	slideImage.src = "res/style/img/slider/"+i+".jpg";
-
-	
-}
-function changebyDot1()
-{
-i=1;
-	slideImage.src = "res/style/img/slider/"+i+".jpg";
-}
-function changebyDot2()
-{
-	i=2;
-	slideImage.src = "res/style/img/slider/"+i+".jpg";
-}
-
+  
 //products
 
 	function checkProductLoaded()
   {
-     j = Math.floor(Math.random() * (95 - 0 + 1) ) + 0; 
+     j = Math.floor(Math.random() * (11 - 0 + 1) ) + 0; 
 
   if(loadedP.includes(j))
 checkProductLoaded();
@@ -527,43 +485,9 @@ maxprice = document.getElementById("priceH").value;
 else
 maxprice=99999999;
 
-catPS = document.getElementById("selectP").options[document.getElementById("selectP").selectedIndex].value;
-
-switch(catPS)
-{
-  case "1":
 sti = 0;
 endi = 11;
-  break;
-  case "2":
-  sti = 12;
-endi = 23;
-  break;
-  case "3":
-  sti = 24;
-endi = 35;
-  break;
-  case "4":
-  sti = 36;
-endi = 47;
-  break;
-  case "5":
-  sti = 48;
-endi = 59;
-  break;
-  case "6":
-  sti = 60;
-endi = 71;
-  break;
-  case "7":
-  sti = 72;
-endi = 83;
-  break;
-  case "8":
-  sti = 84;
-endi = 95;
-  break;
-}
+
 ite = 0;
 var i=0;
 for( i=sti;i <= endi;i++)
@@ -635,7 +559,9 @@ for(var j = ite;j<12;j++)
 
 function searchMain()
 {
-    var sti = 0,endi = 95,ite,sorryS;
+    var sti,endi,ite,sorryS;
+    sti = 0;
+endi = 11;
     sorryS = document.getElementById("sorryS");
   //get Search Data
 var namePS = document.getElementById("search").value;
