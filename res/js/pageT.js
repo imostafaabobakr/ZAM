@@ -78,7 +78,6 @@ photo.src = choosenP[0].path;
 
 	}
  getItemsN();
-
 }
 catch(err)
 {

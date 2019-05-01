@@ -149,6 +149,7 @@ function welcomewrite() {
 (function getProducts()
   {
     changeAddonLoad();
+    getCartNumbN();
 for(var i=0;i < 12;i++)
 {
 
@@ -175,7 +176,7 @@ value = 1;
     priceP[i].innerHTML = (Number(product[j].price)*value) + currL;
     rateP[i].innerHTML = product[j].rating +" <i id=\"starI\" class=\"fas fa-star\">";
     imgP[i].src = product[j].path;
-    if(product[j].carts === 1)
+    if(product[j].carts == 1)
     {
 var addedText;
 
@@ -184,8 +185,6 @@ addedText = document.getElementById(added[i]);
 addedText.innerHTML= "Added to cart" + "  <span><i class=\"fas fa-check\"></i></span>";
 }
 }
-searchP();
-
 
   })();
 //products
@@ -255,6 +254,7 @@ addedText.innerHTML= "Added to cart" + "  <span><i class=\"fas fa-check\"></i></
 product[index].carts = 1;
 choosenP.push(product[index]);
  window.sessionStorage.setItem('cartCP',JSON.stringify(choosenP));
+ getCartNumbN();
   break;
   case 1:
    btnC.style.backgroundColor = "#1da1f2";
@@ -275,7 +275,7 @@ break;
   product[index].carts = 0;
   choosenP.splice(indexDelete, 1);
    window.sessionStorage.setItem('cartCP',JSON.stringify(choosenP));
-
+getCartNumbN();
   break;
 
 
@@ -417,6 +417,7 @@ cartPF.innerHTML= "Added to cart " + "  <span><i class=\"fas fa-check\"></i></sp
 product[index].carts = 1;
 choosenP.push(product[index]);
  window.sessionStorage.setItem('cartCP',JSON.stringify(choosenP));
+ getCartNumbN();
  onclickCardC(selectedII);
   break;
   case 1:
@@ -438,7 +439,7 @@ break;
   product[index].carts = 0;
   choosenP.splice(indexDelete, 1);
    window.sessionStorage.setItem('cartCP',JSON.stringify(choosenP));
-
+getCartNumbN();
   break;
 
 }
@@ -633,4 +634,26 @@ for(var j = ite;j<12;j++)
   //remove items
   bodyP[j].remove();
 }
+}
+function getCartNumbN()
+{
+  var number,circle;
+  var numberCC = 0;
+  number = document.getElementById("numberr");
+  circle = document.getElementById("numberrC");
+  numberCC = choosenP.length;
+  if(numberCC > 0)
+  {
+   number.style.visibility = "visible";
+  circle.style.visibility = "visible";
+  if(numberCC > 9)
+      number.innerHTML = "9+";
+    else
+  number.innerHTML = numberCC;
+  }
+  else
+  {
+  number.style.visibility = "hidden";
+  circle.style.visibility = "hidden";
+  }
 }

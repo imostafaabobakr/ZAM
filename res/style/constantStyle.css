@@ -61,6 +61,32 @@ color: #1da1f2;
     cursor: pointer;
 
 }
+#numberrC
+{
+  vertical-align: center;
+  position: absolute;
+color: white;
+    font-size: 1.0em;
+  top: 30%;
+  margin-right: 1%;
+  margin-left: 87%;
+background-color: #e74c3c;
+border-radius: 90px;
+padding: 10px;
+  cursor: pointer;
+  visibility: hidden;
+}
+#numberr
+{
+  vertical-align: center;
+  position: absolute;
+color: white;
+    font-size: 12px;
+  top: -40%;
+  margin-left: -3px;
+  cursor: pointer;
+  visibility: hidden;
+}
 #dark
 {
 	vertical-align: center;
