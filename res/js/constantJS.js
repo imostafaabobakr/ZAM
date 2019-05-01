@@ -21,9 +21,15 @@ case 0:
 document.body.style.background = "#fff";
 for(var i=0;i<12;i++)
 {
+  try
+  {
   document.getElementsByClassName("theProduct")[i].style.background = "#fff";
   document.getElementsByClassName("nameP")[i].style.color = "#000";
+}
+catch(err)
+{
 
+}
 if(i < 7 && i != 5)
 {
   try{
@@ -42,6 +48,8 @@ document.getElementById("header").style.background = "#fff";
 document.getElementById("darkD").innerHTML = "<i id=\"dark\" class=\"far fa-moon\" onclick=\"darkMoon()\"></i>";
 document.getElementById("loader").style.background = "#fff";
 // Dialog
+try
+{
 document.getElementById("productC").style.background = "#fff";
 
 document.getElementById("closebtn").style.color = "#000";
@@ -52,6 +60,11 @@ document.getElementById("comments").style.color = "#000";
 document.getElementById("leftA").style.color = "#000";
 document.getElementById("nameC").style.color = "#000";
 document.getElementById("rightA").style.color = "#000";
+}
+catch(err)
+{
+
+}
 color = "#000";
 break;
 
@@ -59,9 +72,14 @@ case 1 :
 document.body.style.background = "#10171e";
 for(var i=0;i<12;i++)
 {
+   try{
   document.getElementsByClassName("theProduct")[i].style.background = "#10171e";
   document.getElementsByClassName("nameP")[i].style.color = "#fff";
+}
+catch(err)
+{
 
+}
 if(i < 7 && i != 5)
 {
   try{
@@ -80,6 +98,7 @@ document.getElementById("darkD").innerHTML = "<i id=\"dark\" class=\"fas fa-moon
 document.getElementById("loader").style.background = "#10171e";
 
 // Dialog
+try{
 document.getElementById("productC").style.background = "#10171e";
 
 document.getElementById("closebtn").style.color = "#fff";
@@ -90,7 +109,11 @@ document.getElementById("comments").style.color = "#fff";
 document.getElementById("leftA").style.color = "#fff";
 document.getElementById("nameC").style.color = "#fff";
 document.getElementById("rightA").style.color = "#fff";
+}
+catch(err)
+{
 
+}
 
 
 color = "#fff";
@@ -124,11 +147,6 @@ break;
 }
   darkApply();
 }
-
-
-
-
-
 
 
 //on mouse over
@@ -195,3 +213,8 @@ curr =1;
 //get country
 document.getElementById('selectO').value=curr;
 
+//Go cart page from header
+function cartGo()
+{
+   window.location.href = "cart.html";
+}

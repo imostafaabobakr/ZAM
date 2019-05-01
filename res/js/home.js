@@ -134,10 +134,9 @@ for(var op = 0;op<product.length;op++)
 {
   if(choosenP[l].name.includes(product[op].name))
   {
-product[op].carts = 1;
+product[op].carts = "1";
 break;
-  }else
-  product[op].carts = 0;
+  }
 }
 }  
 }
@@ -287,7 +286,7 @@ var addedText;
 	 var nameL = nameP[indexL].innerHTML;
    var index = product.findIndex(x => x.name === nameL);
    var indexDelete;
-switch(product[index].carts)
+switch(Number(product[index].carts))
 {
 		case 0 :
 		    btnC.style.backgroundColor = "#2ecc71";
@@ -330,7 +329,7 @@ var addedText;
    var indexL = selectedII;
    var nameL = nameP[indexL].innerHTML;
    var index = product.findIndex(x => x.name === nameL);
-switch(product[index].carts)
+switch(Number(product[index].carts))
 {
     case 1 :
         btnC.style.backgroundColor = "#2ecc71";
@@ -450,7 +449,7 @@ function onclickCardF()
 {
    var nameL = namePF.innerHTML
    var index = product.findIndex(x => x.name === nameL);
-switch(product[index].carts)
+switch(Number(product[index].carts))
 {
     case 0 :
         cartPF.style.backgroundColor = "#2ecc71";
@@ -488,7 +487,7 @@ function initCardF()
 {
    var nameL = namePF.innerHTML
    var index = product.findIndex(x => x.name === nameL);
-switch(product[index].carts)
+switch(Number(product[index].carts))
 {
     case 1 :
         cartPF.style.backgroundColor = "#2ecc71";

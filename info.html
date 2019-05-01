@@ -1,12 +1,114 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title></title>
-	<!-- Fav icon -->
+	<title>About us - ZAM</title>
+	 <meta  name="viewport" content="width=device-width, initial-scale=1.0" charset="utf-8" >
+
+  <!-- Fav icon -->
 <link rel="shortcut icon" type="image/png" href="res/style/img/logo.png"/>
 
+	<link rel="stylesheet" type="text/css" href="res/style/pageT.css">
+	<!-- awesome font icons -->
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+
+	<!-- Footer -->
+<link rel="stylesheet" type="text/css" href="res/style/constantStyle.css">
 </head>
 <body>
+	<!-- Loader -->
+		<div  id="loader">
+		<img id="loaderimg" src="res/style/img/loader.gif">
+</div>
 
+<div  id="mainDiv">
+<div id="header">
+	<i id="menu" class="fas fa-bars" onclick="openNav()"></i>
+	<a href="index.html"><img id="logo" src="res/style/img/logo.png" width="80px" height="80px"></a>
+	<input class="inputt" id="search" type="text" name="search" placeholder="Search..." onkeyup="searchMain()">
+  <div  id="darkD"><i id="dark" class="far fa-moon"  onclick="darkMoon()"></i></div>
+<i id="cart" class="fas fa-shopping-cart" onclick="cartGo()"></i>
+</div>
+<!-- Menu -->
+<div id="sidenavId" class="sidenav">
+  <a href="#close" class="closebtn" onclick="closeNav()">&times;</a>
+  <a href="home.html">Home</a>
+  <a href="phone.html">Phones</a>
+  <a href="watches.html">Watches</a>
+  <a href="powerBanks.html">Power Banks</a>
+  <a href="acc.html">Accessories</a>
+ <a href="headPhones.html">Head phones</a>
+ <a href="laptop.html">Laptops</a> 
+ <a href="camera.html">Cameras</a>
+ <a href="tab.html">Tablets</a>
+</div>
+
+
+<div id="descKlam">
+		<h1>About us</h1>
+	<div id="cards">
+		<a href="https://github.com/imostafaabobakr" target="_blank">
+					<div id="cardus">
+
+<img class="imgP" onmouseover="onMouseProduct(this)" onmouseout="offMouseProduct(this)" src="res/style/img/ava/bakr.png">
+        <p class="nameP" onmouseover="onMouseProduct(this)" onmouseout="offMouseProduct(this)">Mostafa Abobakr</p>
+	</div>
+		</a>
+	
+				<div id="cardus">
+<img class="imgP" onmouseover="onMouseProduct(this)" onmouseout="offMouseProduct(this)" src="res/style/img/ava/moaz.png">
+        <p class="nameP" onmouseover="onMouseProduct(this)" onmouseout="offMouseProduct(this)">Moaz Anwar</p>
+	</div>
+				<div id="cardus">
+<img class="imgP" onmouseover="onMouseProduct(this)" onmouseout="offMouseProduct(this)" src="res/style/img/ava/mido.png">
+        <p class="nameP" onmouseover="onMouseProduct(this)" onmouseout="offMouseProduct(this)">Mohamed Abd EL Hamid</p>
+	</div>
+				<div id="cardus">
+<img class="imgP" onmouseover="onMouseProduct(this)" onmouseout="offMouseProduct(this)" src="res/style/img/ava/ramzy.png">
+        <p class="nameP" onmouseover="onMouseProduct(this)" onmouseout="offMouseProduct(this)">Mostafa Ramzy</p>
+	</div>
+				<div id="cardus">
+<img class="imgP" onmouseover="onMouseProduct(this)" onmouseout="offMouseProduct(this)" src="res/style/img/ava/zii.png">
+        <p class="nameP" onmouseover="onMouseProduct(this)" onmouseout="offMouseProduct(this)">Ziad Gamal</p>
+	</div>
+
+	</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+           <a href="https://www.cibeg.com/Arabic/Pages/default.aspx" target="_blank"> <img class="ad"src="res/style/img/ad.jpg"></a>
+      
+
+    <div id="footer">
+  <h3 id="footerR">ZAM &copy; 2019 All Rights Reserved </h3>
+  <div>
+      <span class="footerMenu"><a href="tos.html" >Terms of use</a></span>
+    <span class="footerMenu"><a href="privacy.html">Privacy</a></span>
+  <span class="footerMenu"><a href="contact.html">Contact us</a></span>
+  <span class="footerMenu"><a href="info.html">About us</a></span>
+ <select onchange="selectCountry()" class="inputt" style="height: 33px;"  id="selectO">
+  <option  value="1" selected="selected">United States</option> 
+<option value="18" >Egypt</option>
+<option  value="3.75">Saudi Arabia</option>
+</select>
+  </div>
+
+
+<!-- Product Data -->
+  <script type="text/javascript" src="res/js/database.js"></script>
+<script type="text/javascript" src="res/js/constantJS.js"></script>
+<script type="text/javascript" src="res/js/pageT.js"></script>
+<script type="text/javascript">darkApply();</script>
 </body>
 </html>
