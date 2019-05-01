@@ -79,7 +79,7 @@ document.getElementById("leftA").style.color = "#000";
 catch(err)
 {
   try{
-document.getElementById("mainT").style.color = "#fff";
+document.getElementById("mainT").style.color = "#000";
 }
 catch(err)
 {

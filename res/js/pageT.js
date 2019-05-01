@@ -59,10 +59,12 @@ empty = document.getElementById("empty");
 	try
 	{
 choosenP = JSON.parse(window.sessionStorage.getItem("cartCP"));
+if(choosenP.length == undefined)
+	choosenP=[];
 
 	}catch(err)
 	{
-		choosenP=[]
+		choosenP=[];
 	}
 
 	if(choosenP.length > 0)
