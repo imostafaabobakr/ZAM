@@ -178,6 +178,13 @@ curr = SelectedCountry.options[SelectedCountry.selectedIndex].value;
 window.sessionStorage.country = curr;
 location.reload();
 }
+function selectCountryW()
+{
+  var SelectedCountry = document.getElementById("selectO");
+  //get choosen value
+curr = SelectedCountry.options[SelectedCountry.selectedIndex].value;
+window.sessionStorage.country = curr;
+}
 //get cookies
 (function getcookies()
   {
