@@ -152,7 +152,7 @@ priceAllV = (choosenP[i].price * value) + priceAllV;
 	if(choosenP.length == 0)
 	{
 		productCart.remove();
-		document.getElementById("sorryS").innerHTML = "No thing in your cart !! , Hurry up  <i class=\"fas fa-grin-beam-sweat\"></i>";
+		document.getElementById("sorryS").innerHTML = "Nothing in your cart !! , Hurry up  <i class=\"fas fa-grin-beam-sweat\"></i>";
 	}
 	else
 		priceAll.innerHTML = priceAllV  + currL;
