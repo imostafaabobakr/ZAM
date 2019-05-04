@@ -53,8 +53,9 @@
 		<input class="inputt" type="text" name="nameL" id="nameL" placeholder="Last name" required>
 		<input class="inputt" type="email" name="email" id="email" placeholder="Email" required>
 		<input class="inputt" type="text" name="adress" id="adress" placeholder="Adress" required>
-		<input class="inputt" type="tel" name="credit" id="credit" placeholder="111-111-111-111-111" required>
-			<input class="inputt" type="number" name="cvv" id="cvv" placeholder="CVV" required>
+		<input class="inputt" type="number" name="credit" id="credit" placeholder="111-111-111-111-111" 
+		min="0" max="999999999999999" required>
+			<input class="inputt" type="number" name="cvv" id="cvv" placeholder="CVV" min="1" max="999"required>
 			<input class="inputt" type="date" name="exp" id="exp" placeholder="Exp. Date" required>
 		<input style="text-align: center;" class="inputt" type="submit" name="send" id="submit" value="Send">
 	</form>

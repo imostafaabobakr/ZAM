@@ -58,4 +58,5 @@ body
   margin-right: auto;
    color: white;
 cursor: pointer;
+outline: 0;
 }

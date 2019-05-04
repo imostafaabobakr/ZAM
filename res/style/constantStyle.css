@@ -25,6 +25,7 @@
 	border-radius: 40px;
    text-align: left;
    padding: 0px 10px 0px 10px;
+   outline: 0;
 }
 
 #logo
@@ -247,4 +248,9 @@ a
 
 #myBtn:hover {
   background-color: #555;
+}
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
 }
